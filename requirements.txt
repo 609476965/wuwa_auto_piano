@@ -1,0 +1,9 @@
+# 可选依赖 —— 不装也能正常运行（简谱解析 / MIDI 解析 / 按键发送都是内置的）
+#
+#   pip install -r requirements.txt
+#
+# pydirectinput : 备选按键后端。--backend auto（默认）时会优先使用它，
+#                 没装则自动回退到内置的 SendInput 后端。
+# mido          : 仅在使用 --midi-engine mido 时需要，用于兜底解析特殊格式的 MIDI。
+pydirectinput>=1.0.4 ; sys_platform == "win32"
+mido>=1.3.0
